@@ -1,0 +1,37 @@
+#!/bin/sh
+
+rm netkeiba.sqlite3
+python scrape_init.py
+
+python scrape.py 2009
+cp netkeiba.sqlite3 netkeiba-2009.sqlite3
+
+python scrape.py 2010
+cp netkeiba.sqlite3 netkeiba-2010.sqlite3
+
+python scrape.py 2011
+cp netkeiba.sqlite3 netkeiba-2011.sqlite3
+
+python scrape.py 2012
+cp netkeiba.sqlite3 netkeiba-2012.sqlite3
+
+python scrape.py 2013
+cp netkeiba.sqlite3 netkeiba-2013.sqlite3
+
+python scrape.py 2014
+cp netkeiba.sqlite3 netkeiba-2014.sqlite3
+
+python scrape.py 2015
+cp netkeiba.sqlite3 netkeiba-2015.sqlite3
+
+python scrape.py 2016
+cp netkeiba.sqlite3 netkeiba-2016.sqlite3
+
+python scrape.py 2017
+cp netkeiba.sqlite3 netkeiba-2017.sqlite3
+
+python scrape.py 2018
+cp netkeiba.sqlite3 netkeiba-2018.sqlite3
+
+python scrape.py 2019
+cp netkeiba.sqlite3 netkeiba-2019.sqlite3
