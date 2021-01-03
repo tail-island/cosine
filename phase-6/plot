@@ -1,0 +1,7 @@
+#!/bin/sh
+
+python plot.py 2015 2015 model-2015.txt
+python plot.py 2016 2016 model-2016.txt
+python plot.py 2017 2017 model-2017.txt
+python plot.py 2018 2018 model-2018.txt
+python plot.py 2019 2019 model-2019.txt
