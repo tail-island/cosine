@@ -14,7 +14,7 @@ def select_data():
                              f'results_{i}.rank',
                              f'results_{i}.sex',
                              f'results_{i}.age',
-                             f'results_{i}.jockey_weight',
+                             f'results_{i}.jockey_class',
                              f'results_{i}.jockey_weight',
                              f'results_{i}.odds',
                              f'results_{i}.weight'))

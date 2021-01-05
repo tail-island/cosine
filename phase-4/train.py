@@ -21,7 +21,7 @@ def main():
 
     model = tf.keras.Model(*juxt(identity, op(NUM_BLOCKS, D_MODEL, NUM_HEADS, D_FF, tuple(map(lambda x_item: np.max(x_item) + 1, xs)), MAXIMUM_POSITION, DROPOUT_RATE))(tuple(map(lambda x_item: tf.keras.Input(shape=np.shape(x_item)[1:]), xs))))
     # model.summary()
-    model.compile(optimizer=tf.keras.optimizers.Adam(LearningRateSchedule(D_MODEL), beta_1=0.9, beta_2=0.98, epsilon=1e-9), loss='huber', metrics=('mae',))
+    model.compile(optimizer=tf.keras.optimizers.Adam(LearningRateSchedule(D_MODEL), beta_1=0.9, beta_2=0.98, epsilon=1e-9), loss='mse', metrics=('mae',))
     model.fit(train_xs, train_ys, batch_size=256, epochs=epoch_size, validation_data=(valid_xs, valid_ys))
 
     tf.keras.models.save_model(model, model_path, include_optimizer=False)

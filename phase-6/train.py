@@ -14,8 +14,8 @@ def main():
     train_set, valid_set = get_data_sets(get_data_frame(), sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
 
     params = {
-        'objective': 'huber',
-        'metric': 'huber',
+        'objective': 'regression',
+        'metric': 'mse',
         'force_row_wise': True,
 
         'learning_rate': 0.05
