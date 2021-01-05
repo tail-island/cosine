@@ -35,11 +35,11 @@ for exacta_count in range(1, 4):
         problem += expense >= 1
 
         for i in range(7):
-            if i not in exacta:
-                problem += xs[i][0] * data[i][0] >= expense
-            else:
+            if i in exacta:
                 for j in range(1, 7):
                     problem += xs[i][j] * data[i][j] >= expense
+            else:
+                problem += xs[i][0] * data[i][0] >= expense
 
         status = problem.solve(PULP_CBC_CMD(msg=0))
 
